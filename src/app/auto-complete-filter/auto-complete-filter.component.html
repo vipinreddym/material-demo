@@ -1,0 +1,48 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a routerLink='/users'>Users</a></li>
+      <li><a routerLink='/add-user'>Add user</a></li>
+      <li><a routerLink='/auto-complete-filter'>Filter</a></li>
+     
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      
+      <li style="cursor:pointer;"><a (click)="logOut()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-5 title">
+      <input type="search" placeholder="Type region or city" id="name"  class="region-set" [(ngModel)]="search" (click)="onDisplay()">
+      <div class="filter-search" *ngIf="display"> 
+      <div class="search-results" (scroll)="loadmore($event)" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" [scrollWindow]="false" [infiniteScrollDisabled]="isFullListDisplayed">
+          <div *ngFor="let items of itemsToShow | filter:search; let i=index" class="filter-borders" (change)="selectCities($event)">
+              <span> {{i + 1 + ' . ' + items.city}}&nbsp; &&nbsp;
+                  <strong>State</strong>: &nbsp;{{items.state}}</span>
+          </div>
+      </div>
+      
+      </div>
+    </div>
+    <div class="col-xs-5">
+      <form [formGroup]="stateForm">
+        <mat-form-field>
+          <input type="text" matInput placeholder="States Group" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+            <mat-autocomplete #autoGroup="matAutocomplete">
+              <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                <mat-option *ngFor="let name of group.names" [value]="name">
+                  {{name}}
+                </mat-option>
+            </mat-optgroup>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+</div>
+

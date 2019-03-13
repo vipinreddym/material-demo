@@ -1,0 +1,29 @@
+<ol>
+  <li>
+    <mat-form-field>
+      <input matInput [(ngModel)]="name" placeholder="What's your name?">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal">
+    You chose: <i>{{animal}}</i>
+  </li>
+</ol>
+<div class="progrees-bar">
+  <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+</div>
+<div class="video-upload">
+  <label for="coverimg-file-upload" class="btn custom-input-btn btn-choose">
+    Click to select
+  </label>
+  <input type="file" id="coverimg-file-upload" name="coverimg-select" accept="image/*" ng2FileSelect (change)="fileOverAnother($event)"
+    [uploader]="trailerCoverImageUpload" />
+  <!-- {{trailerCoverImageUpload.queue[0]}},{{trailerCoverImageUpload.queue[0].isSuccess}},{{trailerCoverImageUpload.queue[0].isReady}} -->
+  <button type="button" class="btn btn-upload-episode">
+    Upload
+  </button>
+  <img [src]="url">
+
+</div>

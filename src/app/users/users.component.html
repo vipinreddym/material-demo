@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <!-- <div class="row">
+      <div class="text-right col-sm-4 search-align">
+        <input type="search" class="form-control" placeholder="Search.." [(ngModel)]="find">
+      </div>
+    </div> -->
+    <div class="row" style="margin-top:10%">
+        <div *ngFor ="let user of users | paginate: { itemsPerPage: usersPerPage.size, currentPage: p, totalItems: total }; let i=index;">
+            <div class="col-sm-4" (click)="userDetails(user.id)" style="cursor:pointer;">
+              <img src="{{user.avatar}}" alt="" width="250px" height="250px">
+              <p class="name">{{user.first_name}} {{user.last_name}} </p>
+      
+            </div>
+          </div>
+
+    </div>
+    <div class="container col-xs-12 text-right">
+            <pagination-controls (pageChange)="pageChanged($event)" autoHide="true"></pagination-controls>
+        </div>
+  </div>
