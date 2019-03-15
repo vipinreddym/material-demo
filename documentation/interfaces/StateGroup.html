@@ -162,6 +162,8 @@
 import {FormBuilder, FormGroup} from &#x27;@angular/forms&#x27;;
 import {Observable} from &#x27;rxjs&#x27;;
 import {startWith, map} from &#x27;rxjs/operators&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
 
 export interface StateGroup {
   letter: string;
@@ -180,6 +182,8 @@ export const _filter &#x3D; (opt: string[], value: string): string[] &#x3D;&gt; 
   styleUrls: [&#x27;./auto-complete-filter.component.css&#x27;]
 })
 export class AutoCompleteFilterComponent implements OnInit {
+  public token:any;
+
   stateForm: FormGroup &#x3D; this.fb.group({
     stateGroup: &#x27;&#x27;,
   });
@@ -320,10 +324,13 @@ export class AutoCompleteFilterComponent implements OnInit {
     { &#x27;city&#x27;: &#x27;Central Point&#x27;, &#x27;state&#x27;: &#x27;Oregon&#x27; }
   ]
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+    public router: Router) { }
   
 
   ngOnInit() {
+
+    this.token &#x3D; localStorage.getItem(&#x27;token&#x27;);
     this.stateGroupOptions &#x3D; this.stateForm.get(&#x27;stateGroup&#x27;)!.valueChanges
     .pipe(
       startWith(&#x27;&#x27;),
@@ -369,6 +376,12 @@ export class AutoCompleteFilterComponent implements OnInit {
    
     // }
   
+  }
+  logOut(){
+    localStorage.clear();
+    
+    this.router.navigate([&#x27;/login&#x27;]);
+
   }
 
 }

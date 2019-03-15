@@ -356,6 +356,7 @@ import {MatInputModule} from &#x27;@angular/material/input&#x27;;
 // import {GoogleSignInComponent} from &#x27;angular-google-signin&#x27;;
 import { SocialLoginModule, AuthServiceConfig,GoogleLoginProvider,FacebookLoginProvider} from &quot;angular5-social-login&quot;;
 import { AngularFontAwesomeModule } from &#x27;angular-font-awesome&#x27;;
+import { Ng4GeoautocompleteModule } from &#x27;ng4-geoautocomplete&#x27;;
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -383,8 +384,8 @@ const router : Routes &#x3D; [
   { path : &#x27;registation/reactive&#x27;, component: RegisterReactiveComponent},
   { path: &#x27;add-user&#x27;, component:AddUserComponent, canActivate: [AuthGuardService]},
   { path:&#x27;auto-complete-filter&#x27;, component:AutoCompleteFilterComponent},
-  { path: &#x27;users&#x27;,loadChildren:&quot;./users/users.module#UsersModule&quot;,canActivate: [AuthGuardService]}
- 
+  { path: &#x27;users&#x27;,loadChildren:&quot;./users/users.module#UsersModule&quot;,canActivate: [AuthGuardService]},
+  { path: &#x27;sample&#x27;, loadChildren : &quot;./sample/sample.module#SampleModule&quot;,canActivate: [AuthGuardService]}
 ]
 
 @NgModule({
@@ -416,9 +417,8 @@ const router : Routes &#x3D; [
     MatFormFieldModule,
     MatInputModule,
     SocialLoginModule,
-    AngularFontAwesomeModule
-    
-    
+    AngularFontAwesomeModule,
+    Ng4GeoautocompleteModule.forRoot()   
   ],
   exports: [
     MatAutocompleteModule,

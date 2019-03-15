@@ -200,7 +200,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/login/login.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/login/login.component.ts:24</a></div>
                             </td>
                         </tr>
 
@@ -293,8 +293,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/app/login/login.component.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/login/login.component.ts:46</a></div>
                 </td>
             </tr>
 
@@ -332,8 +332,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="88"
-                            class="link-to-prism">src/app/login/login.component.ts:88</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/login/login.component.ts:85</a></div>
                 </td>
             </tr>
 
@@ -373,8 +373,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">src/app/login/login.component.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/login/login.component.ts:61</a></div>
                 </td>
             </tr>
 
@@ -448,7 +448,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/login/login.component.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/login/login.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -484,7 +484,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/login/login.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/login/login.component.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -512,7 +512,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/login/login.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/login/login.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -545,7 +545,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/login/login.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/login/login.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -581,7 +581,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/login/login.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/login/login.component.ts:21</a></div>
                             </td>
                         </tr>
 
@@ -617,7 +617,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/login/login.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/login/login.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -645,7 +645,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/login/login.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/login/login.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -662,11 +662,7 @@
 import { Router } from &#x27;@angular/router&#x27;;
 import { AppService } from &#x27;../app.service&#x27;;
 import {GoogleSignInSuccess} from &#x27;angular-google-signin&#x27;;
-import {
-  AuthService,
-  FacebookLoginProvider,
-  GoogleLoginProvider
-} from &#x27;angular5-social-login&#x27;;
+import {AuthService, FacebookLoginProvider, GoogleLoginProvider } from &#x27;angular5-social-login&#x27;;
 
 
 @Component({
@@ -735,6 +731,7 @@ export class LoginComponent implements OnInit {
         console.log(socialPlatform+&quot; sign in data : &quot; , userData);
         // Now sign-in with userData
         localStorage.setItem(&#x27;token&#x27;, userData.token);
+        localStorage.setItem(&#x27;id&#x27;, userData.id);
         localStorage.setItem(&#x27;image&#x27;, userData.image);
         localStorage.setItem(&#x27;name&#x27;, userData.name)
         if(userData.token){
@@ -913,7 +910,7 @@ export class LoginComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"><app-header></app-header><div class="wrapper">  <form class="form-signin">    <h2 class="form-signin-heading">Login Form</h2>    <input type="email" [(ngModel)]="loginData.email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"      placeholder="email" id="name" name="email" #email="ngModel" required>    <p *ngIf="!loginData.email && email.touched || (!loginData.email && isValid)" class="error">Please fill this field</p>    <div *ngIf=loginData.email [hidden]="email.untouched || email.valid " class="error">Please enter a valid email    </div>    <input type="password" [(ngModel)]="loginData.password" class="form-control" placeholder="Password" name="password"      minlength="8" #password="ngModel" id="PassWord" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>      <p *ngIf="!loginData.password && password.touched || (!loginData.password && isValid)" class="error">Please        fill this field</p>      <div *ngIf=loginData.password [hidden]="password.untouched || password.valid " class="error">Password minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character </div>    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onLogin()">Login</button>   <button class="btn col-xs-5 btn-facebook" (click)="socialSignIn(\'facebook\')">      <i class="fab fa-facebook-f"></i>   Login with Facebook</button>   <button class="btn col-xs-5 btn-google" (click)="socialSignIn(\'google\')">  <i class="fab fa-google"></i>  Login with Google</button>  </form>  <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->  <!-- <google-signin  [clientId]="myClientId"  [width]="myWidth"  [theme]="myTheme"  [scope]="myScope"  [longTitle]="myLongTitle"  (googleSignInSuccess)="onGoogleSignInSuccess($event)"></google-signin> --><!-- <button (click)="socialSignIn(\'facebook\')">Sign in with Facebook</button><button (click)="socialSignIn(\'google\')">Signin in with Google</button> --></div></div>'
-    var COMPONENTS = [{'name': 'AddUserComponent', 'selector': 'app-add-user'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AutoCompleteFilterComponent', 'selector': 'app-auto-complete-filter'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'RegisterReactiveComponent', 'selector': 'app-register-reactive'},{'name': 'RegisterTemplateComponent', 'selector': 'app-register-template'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UsersComponent', 'selector': 'app-users'}];
+    var COMPONENTS = [{'name': 'AddUserComponent', 'selector': 'app-add-user'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AutoCompleteFilterComponent', 'selector': 'app-auto-complete-filter'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DialogOverviewExampleDialog', 'selector': 'dialog-overview-example-dialog'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModelDemoComponent', 'selector': 'app-model-demo'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PracComponent', 'selector': 'app-prac'},{'name': 'RegisterReactiveComponent', 'selector': 'app-register-reactive'},{'name': 'RegisterTemplateComponent', 'selector': 'app-register-template'},{'name': 'SampleComponent', 'selector': 'app-sample'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UsersComponent', 'selector': 'app-users'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
 </script>

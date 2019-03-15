@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AppComponent</li>
+  <li>DialogOverviewExampleDialog</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -49,9 +49,6 @@
             <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
         </li>
         <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li >
             <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
@@ -61,7 +58,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app.component.ts</code>
+    <code>src/app/sample/model-demo/model-demo.component.ts</code>
 </p>
 
 
@@ -74,10 +71,6 @@
         <tbody>
 
 
-            <tr>
-                <td class="col-md-3">encapsulation</td>
-                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
-            </tr>
 
 
 
@@ -89,19 +82,15 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-root</code></td>
+                <td class="col-md-9"><code>dialog-overview-example-dialog</code></td>
             </tr>
 
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./app.component.css</code></td>
-            </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./app.component.html</code></td>
+                <td class="col-md-9"><code>dialog-overview-example-dialog.html</code></td>
             </tr>
 
 
@@ -128,11 +117,12 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#title">title</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#data">data</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#token">token</a>
+                                <a href="#dialogRef">dialogRef</a>
                             </li>
                         </ul>
                     </td>
@@ -147,7 +137,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#onNoClick">onNoClick</a>
                             </li>
                         </ul>
                     </td>
@@ -161,6 +151,66 @@
     </table>
 </section>
 
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dialogRef: <a href="../components/DialogOverviewExampleDialog.html">MatDialogRef<DialogOverviewExampleDialog></a>, data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/app/sample/model-demo/model-demo.component.ts:90</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dialogRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../components/DialogOverviewExampleDialog.html" target="_self" >MatDialogRef&lt;DialogOverviewExampleDialog&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>data</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
 
 
@@ -175,26 +225,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnInit"></a>
+                    <a name="onNoClick"></a>
                     <span class="name">
                         <b>
-                            ngOnInit
+                            onNoClick
                         </b>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        <a href="#onNoClick"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnInit()</code>
+<code>onNoClick()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/app.component.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/sample/model-demo/model-demo.component.ts:96</a></div>
                 </td>
             </tr>
 
@@ -220,28 +270,33 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="title"></a>
+                        <a name="data"></a>
                         <span class="name">
                             <b>
-                            title</b>
-                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Public</span>
+                            data</b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;app&#x27;</code>
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Inject(MAT_DIALOG_DATA)<br />
+                            </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/app.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/sample/model-demo/model-demo.component.ts:94</a></div>
                             </td>
                         </tr>
 
@@ -252,24 +307,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="token"></a>
+                        <a name="dialogRef"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            token</b>
-                            <a href="#token"><span class="icon ion-ios-link"></span></a>
+                            dialogRef</b>
+                            <a href="#dialogRef"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                            <i>Type : </i>        <code><a href="../components/DialogOverviewExampleDialog.html" target="_self" >MatDialogRef&lt;DialogOverviewExampleDialog&gt;</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/app.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/app/sample/model-demo/model-demo.component.ts:93</a></div>
                             </td>
                         </tr>
 
@@ -282,64 +337,126 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit,ViewEncapsulation } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material&#x27;;
+import { FileUploader } from &#x27;ng2-file-upload&#x27;;
 
 @Component({
-  selector: &#x27;app-root&#x27;,
-  templateUrl: &#x27;./app.component.html&#x27;,
-  styleUrls: [&#x27;./app.component.css&#x27;],
-  encapsulation:ViewEncapsulation.None
+  selector: &#x27;app-model-demo&#x27;,
+  templateUrl: &#x27;./model-demo.component.html&#x27;,
+  styleUrls: [&#x27;./model-demo.component.css&#x27;]
 })
-export class AppComponent {
-  title &#x3D; &#x27;app&#x27;;
-  public token:any;
+export class ModelDemoComponent implements OnInit {
 
+
+  public trailerCoverImageUpload: FileUploader;
+  imgFormData: any;
+  image: any;
+  url: any;
   ngOnInit() {
-    this.token &#x3D; localStorage.getItem(&#x27;token&#x27;)
-    console.log(this.token);
-  
-    
   }
-}
 
-</code></pre>
+
+  public fileOverBase(e: any): void {
+    // this.hasBaseDropZoneOver &#x3D; e;
+    console.log(e);
+
+  }
+  animal: string;
+  name: string;
+  public trailerCoverImageURL &#x3D; &#x27;http://13.233.92.42:3001/api/v1.0/media/&#x27;;
+  constructor(public dialog: MatDialog) {
+
+    this.trailerCoverImageURL &#x3D; this.trailerCoverImageURL + &#x27;5c861cfe85814e0d4a2ac05e&#x27; + &quot;/trailerCoverImageUrl&quot;;
+    this.trailerCoverImageUpload &#x3D; new FileUploader({ url: this.trailerCoverImageURL, disableMultipart: true });
+    console.log(this.trailerCoverImageUpload.queue[0])
+    this.trailerCoverImageUpload.onBeforeUploadItem &#x3D; (item) &#x3D;&gt; {
+      item.withCredentials &#x3D; false;
+    }
+
+  }
+  public fileOverAnother(event: any): void {
+    // this.hasAnotherDropZoneOver &#x3D; e;
+    console.log(&quot;eeeeeee&quot;, event);
+    console.log(event.target.files[0]);
+    this.imgFormData &#x3D; new FormData();
+    this.image &#x3D; event.target.files[0]
+    console.log(this.image)
+
+    this.imgFormData.append(&quot;coverImage&quot;, this.image);
+    this.url &#x3D; &#x27;&#x27;;
+    if (event.target.files) {
+      var reader &#x3D; new FileReader();
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+      reader.onload &#x3D; (event: any) &#x3D;&gt; {
+        var img: any &#x3D; new Image();
+        img.src &#x3D; reader.result;
+
+
+        img.onload &#x3D; () &#x3D;&gt; {
+
+          this.url &#x3D; event.target.result;
+          console.log(this.url);
+
+        };
+      }
+    }
+
+  }
+
+
+
+  openDialog(): void {
+    let dialogRef &#x3D; this.dialog.open(DialogOverviewExampleDialog, {
+      width: &#x27;500px&#x27;,
+      height: &#x27;400px&#x27;,
+      data: { name: this.name, animal: this.animal }
+
+    });
+
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      console.log(&#x27;The dialog was closed&#x27;);
+      this.animal &#x3D; result;
+
+    });
+  }
+
+}
+@Component({
+  selector: &#x27;dialog-overview-example-dialog&#x27;,
+  templateUrl: &#x27;dialog-overview-example-dialog.html&#x27;
+})
+export class DialogOverviewExampleDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef&lt;DialogOverviewExampleDialog&gt;,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
+
+  onNoClick(): void {
+
+    this.dialogRef.close();
+    this.data.animal &#x3D; &#x27;&#x27;;
+  }
+
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!-- &lt;div *ngIf&#x3D;&quot;token&quot;&gt;
-    &lt;app-navbar&gt;&lt;/app-navbar&gt;
-&lt;/div&gt; --&gt;
-
-&lt;router-outlet&gt;&lt;/router-outlet&gt;
-&lt;!-- &lt;div class&#x3D;&quot;container main-margin&quot;&gt;
-    &lt;div class&#x3D;&quot;row&quot;&gt;
-        &lt;h1&gt;Angular Registration Forms&lt;/h1&gt;
-        &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;
-                &lt;a routerLink&#x3D;&#x27;/registation/reactive&#x27;&gt;
-            &lt;button class&#x3D;&quot;btn btn-danger btn-custom&quot;&gt; Reactive Forms &lt;/button&gt;&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;&lt;a routerLink&#x3D;&#x27;/registation/template&#x27;&gt;
-            &lt;button class&#x3D;&quot;btn btn-success btn-custom&quot;&gt; Template Driven Forms&lt;/button&gt;&lt;/a&gt;
-
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;clearfix&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt; --&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;text-center&quot;&gt;
+  &lt;h1 mat-dialog-title&gt;Hi {{data.name}}&lt;/h1&gt;
+  &lt;div mat-dialog-content&gt;
+    &lt;p&gt;What&#x27;s your favorite animal?&lt;/p&gt;
+    &lt;mat-form-field&gt;
+      &lt;input matInput [(ngModel)]&#x3D;&quot;data.animal&quot;&gt;
+    &lt;/mat-form-field&gt;
+  &lt;/div&gt;
+  &lt;div mat-dialog-actions class&#x3D;&quot;model-center&quot;&gt;
+    &lt;button mat-button (click)&#x3D;&quot;onNoClick()&quot;&gt;No Thanks&lt;/button&gt;
+    &lt;button mat-button [mat-dialog-close]&#x3D;&quot;data.animal&quot; cdkFocusInitial&gt;Ok&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-styleData">
-                <p class="comment">
-                    <code>./app.component.css</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss">.main-margin {
-    margin: 50px 0 0 0;
-    text-align: center;
-}
-.btn-custom a{
-    text-decoration: none;
-    color: #fff;
-}</code></pre>
-    </div>
 
     <div class="tab-pane fade " id="c-tree">
         <div id="tree-container"></div>
@@ -366,10 +483,10 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- <div *ngIf="token">    <app-navbar></app-navbar></div> --><router-outlet></router-outlet><!-- <div class="container main-margin">    <div class="row">        <h1>Angular Registration Forms</h1>        <div class="col-sm-6">                <a routerLink=\'/registation/reactive\'>            <button class="btn btn-danger btn-custom"> Reactive Forms </button></a>        </div>        <div class="col-sm-6"><a routerLink=\'/registation/template\'>            <button class="btn btn-success btn-custom"> Template Driven Forms</button></a>        </div>        <div class="clearfix"></div>    </div></div> --></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="text-center">  <h1 mat-dialog-title>Hi {{data.name}}</h1>  <div mat-dialog-content>    <p>What\'s your favorite animal?</p>    <mat-form-field>      <input matInput [(ngModel)]="data.animal">    </mat-form-field>  </div>  <div mat-dialog-actions class="model-center">    <button mat-button (click)="onNoClick()">No Thanks</button>    <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>  </div></div></div>'
     var COMPONENTS = [{'name': 'AddUserComponent', 'selector': 'app-add-user'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AutoCompleteFilterComponent', 'selector': 'app-auto-complete-filter'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DialogOverviewExampleDialog', 'selector': 'dialog-overview-example-dialog'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ModelDemoComponent', 'selector': 'app-model-demo'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PracComponent', 'selector': 'app-prac'},{'name': 'RegisterReactiveComponent', 'selector': 'app-register-reactive'},{'name': 'RegisterTemplateComponent', 'selector': 'app-register-template'},{'name': 'SampleComponent', 'selector': 'app-sample'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UsersComponent', 'selector': 'app-users'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+    var ACTUAL_COMPONENT = {'name': 'DialogOverviewExampleDialog'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -403,7 +520,7 @@ export class AppComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'DialogOverviewExampleDialog.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

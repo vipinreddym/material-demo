@@ -8,6 +8,8 @@ export class MessageService {
   private subject = new Subject<any>();
 
   sendMessage(message: string) {
+    console.log("messageservice",message);
+    
     this.subject.next({ text: message });
     }
 
